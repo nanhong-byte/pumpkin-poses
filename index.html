@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>南瓜姿勢庫 · 280 套姿勢 × 五機位線稿、白模、深度圖、法線圖</title>
+<meta name="description" content="280 套無臉素體姿勢、1,212 張線稿，正面、斜側、側面、俯視、仰視最多五個機位，多數另附白模、深度圖與法線圖。拖進 AI 繪圖工具或 ControlNet，姿勢一次到位。">
+<meta property="og:title" content="南瓜姿勢庫 · 280 套姿勢 × 五機位">
+<meta property="og:description" content="線稿、白模、深度圖、法線圖一次給，拖進 AI 繪圖工具，姿勢就定住了。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='10' fill='%232D2B2C'/%3E%3Ccircle cx='16' cy='9.5' r='3.2' fill='%23FDC302'/%3E%3Cpath d='M16 13.5v7.5m0 0-4.5 5.5M16 21l4.5 5.5M10 16.5l6-2 6 2' stroke='%23FDC302' stroke-width='2.2' stroke-linecap='round' fill='none'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;900&family=Roboto+Mono:wght@400;500&family=Noto+Sans+TC:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/ink-gold.css?v=1.0.2">
+<link rel="stylesheet" href="assets/app.css?v=1.0.2">
+</head>
+<body class="ig ig-directory">
+
+<a class="skip" href="#poses">跳到姿勢列表</a>
+
+<nav class="ig-nav" aria-label="主選單">
+  <a class="ig-nav__brand" href="./" aria-label="南瓜姿勢庫 首頁">
+    <img class="ig-brand-logo" src="assets/brand/pumpkin-logo-black.svg" alt="南瓜虛擬科技">
+  </a>
+  <div class="ig-nav__links">
+    <a class="ig-nav__link is-active" href="#poses" aria-current="page">姿勢</a>
+    <a class="ig-nav__link" href="#howto">怎麼用</a>
+    <a class="ig-nav__link" href="#download">下載圖包</a>
+  </div>
+  <div class="ig-nav__right">
+    <button class="ig-theme-toggle" type="button" data-ig-theme-toggle aria-label="切換深色模式" aria-pressed="false"></button>
+    <a class="ig-btn ig-btn--line ig-btn--sm" href="#download">下載圖包</a>
+  </div>
+</nav>
+
+<main class="ig-container">
+
+  <header class="hero">
+    <p class="ig-eyebrow">Pumpkin Pose Library · 南瓜姿勢庫</p>
+    <h1 class="hero__title">姿勢參考，<br class="br-m"><span class="ig-mark">五個機位</span>一次給你</h1>
+    <p class="hero__lead"><b id="heroPoses">280</b> 套無臉素體姿勢、<b id="heroLines">1,212</b> 張線稿，正面、斜側、側面、俯視、仰視最多五個機位；多數機位另附白模、深度圖和法線圖。拖進 AI 繪圖工具，姿勢就定住了。</p>
+    <div class="hero__actions">
+      <a class="ig-btn ig-btn--gold ig-btn--lg" href="#poses" id="heroBrowse">瀏覽 280 套姿勢</a>
+      <a class="ig-btn ig-btn--ghost ig-btn--lg" href="#download">下載圖包</a>
+    </div>
+    <ul class="hero__tools" aria-label="適用工具">
+      <li class="hero__tools-label">適用於</li>
+      <li>ComfyUI</li><li>Stable Diffusion</li><li>Flux</li><li>Midjourney</li><li>Nano Banana</li><li>ChatGPT</li><li>Qwen-Image</li><li>即夢</li><li>Blender</li><li>Unreal Engine</li>
+    </ul>
+  </header>
+
+  <div class="marquee" id="marquee" aria-label="姿勢預覽">
+    <div class="marquee__track" id="marqueeTrack"></div>
+  </div>
+
+  <!-- ── 姿勢列表 ── -->
+  <section class="gallery" id="poses" aria-labelledby="posesTitle">
+    <div class="gallery__head">
+      <h2 class="sec-title" id="posesTitle">全部姿勢 <span class="sec-count ig-num" id="count" aria-live="polite"></span></h2>
+      <label class="ig-search gallery__search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <span class="sr">搜尋姿勢</span>
+        <input id="search" type="search" placeholder="搜尋姿勢、編號，例如：托腮、P012" autocomplete="off">
+        <kbd class="ig-kbd" aria-hidden="true">/</kbd>
+      </label>
+    </div>
+
+    <div class="ig-pills" id="seriesPills" role="group" aria-label="系列"></div>
+    <div class="ig-pills cats" id="catPills" role="group" aria-label="分類"></div>
+
+    <div class="toolbar">
+      <div class="seg" role="group" aria-label="機位" id="angleSeg"></div>
+      <div class="seg" role="group" aria-label="格式" id="fmtSeg"></div>
+      <div class="seg" role="group" aria-label="顯示方式" id="modeSeg"></div>
+      <button class="switch" id="adult" type="button" role="switch" aria-checked="false">
+        <span class="switch__text">敏感姿勢：<b id="adultState">模糊</b></span><span class="switch__track" aria-hidden="true"><i></i></span>
+      </button>
+    </div>
+
+    <div class="grid" id="grid"></div>
+    <div class="empty" id="empty" hidden>
+      <p class="empty__title">沒有找到符合的姿勢</p>
+      <p class="empty__hint">換個關鍵字，或把篩選條件放寬一點。</p>
+      <button class="ig-btn ig-btn--ink ig-btn--sm" type="button" id="clearAll">清除所有條件</button>
+    </div>
+    <div class="more"><button class="ig-btn ig-btn--ghost" type="button" id="more" hidden></button></div>
+  </section>
+
+  <!-- ── 怎麼用 ── -->
+  <section class="howto" id="howto" aria-labelledby="howtoTitle">
+    <h2 class="sec-title" id="howtoTitle">五種格式，拿去就能用</h2>
+    <p class="sec-lead">同一個姿勢、同一個機位，最多給你五種圖。挑你的工具吃得下的那一種就好。</p>
+    <div class="ig-grid howto__grid" id="howtoGrid"></div>
+  </section>
+
+  <!-- ── 下載 ── -->
+  <section class="dl" id="download" aria-labelledby="dlTitle">
+    <div class="dl__card">
+      <div class="dl__intro">
+        <h2 class="sec-title" id="dlTitle">下載圖包</h2>
+        <p class="sec-lead">勾選要的系列和格式，瀏覽器直接幫你打包成 ZIP（寬 900px 大圖，WebP 格式）。資料夾已依系列、格式分好。</p>
+      </div>
+      <fieldset class="dl__group">
+        <legend>系列</legend>
+        <div class="ig-pills" id="dlSeries"></div>
+      </fieldset>
+      <fieldset class="dl__group">
+        <legend>格式</legend>
+        <div class="ig-pills" id="dlFmts"></div>
+      </fieldset>
+      <div class="dl__foot">
+        <p class="dl__sum" id="dlSum" aria-live="polite"></p>
+        <button class="ig-btn ig-btn--gold" type="button" id="dlGo">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M12 4v11m0 0-4-4m4 4 4-4M5 20h14"/></svg>
+          打包下載
+        </button>
+      </div>
+      <div class="dl__progress" id="dlProgress" hidden>
+        <div class="bar"><i id="dlBar"></i></div>
+        <p class="dl__status" id="dlStatus" aria-live="polite"></p>
+        <button class="ig-btn ig-btn--ghost ig-btn--sm" type="button" id="dlCancel">取消</button>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <img class="ig-brand-logo foot__logo" src="assets/brand/pumpkin-logo-black.svg" alt="南瓜虛擬科技">
+  <p>南瓜姿勢庫 · 給 AI 繪圖、3D 擺姿與分鏡用的姿勢參考</p>
+  <p class="foot__note">圖中人物皆為無臉素體或 AI 生成的成年人，不涉及真實人物。圖片可免費用於個人與商業創作。</p>
+</footer>
+
+<!-- ── 姿勢大圖 ── -->
+<dialog class="lb" id="lb" aria-labelledby="lbName">
+  <div class="lb__wrap">
+    <div class="lb__stage" id="lbStage">
+      <div class="lb__single" id="lbSingle">
+        <img id="lbImg" alt="">
+        <div class="lb__wipe" id="lbWipe" hidden>
+          <img id="lbWipeImg" alt="">
+          <input type="range" min="0" max="100" value="50" id="lbWipeRange" aria-label="對照滑桿：左邊線稿、右邊目前格式">
+          <span class="lb__wipe-tag l">線稿</span><span class="lb__wipe-tag r" id="lbWipeTagR"></span>
+        </div>
+      </div>
+      <div class="lb__overview" id="lbOverview" hidden></div>
+      <button class="lb__nav prev" type="button" id="lbPrev" aria-label="上一套姿勢"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m15 5-7 7 7 7"/></svg></button>
+      <button class="lb__nav next" type="button" id="lbNext" aria-label="下一套姿勢"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></button>
+    </div>
+
+    <aside class="lb__panel">
+      <div class="lb__top">
+        <p class="lb__meta" id="lbMeta"></p>
+        <button class="lb__close lb__link" type="button" id="lbLink" aria-label="複製這套姿勢的連結" title="複製連結"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M10 14a4.5 4.5 0 0 0 6.4 0l3-3a4.5 4.5 0 0 0-6.4-6.4l-1 1"/><path d="M14 10a4.5 4.5 0 0 0-6.4 0l-3 3a4.5 4.5 0 0 0 6.4 6.4l1-1"/></svg></button>
+        <button class="lb__close" type="button" id="lbClose" aria-label="關閉"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+      </div>
+      <h3 class="lb__name" id="lbName"></h3>
+      <p class="lb__en" id="lbEn" lang="en"></p>
+
+      <p class="lb__label">機位</p>
+      <div class="lb__angles" id="lbAngles" role="group" aria-label="機位"></div>
+
+      <p class="lb__label">格式</p>
+      <div class="ig-pills lb__fmts" id="lbFmts" role="group" aria-label="格式"></div>
+
+      <p class="lb__label">檢視</p>
+      <div class="seg lb__modes" id="lbModes" role="group" aria-label="檢視方式"></div>
+
+      <div class="lb__prompt">
+        <p class="lb__label">AI 提示詞（英文）</p>
+        <p class="lb__desc" id="lbDesc" lang="en"></p>
+        <button class="lb__copy" type="button" id="lbCopyPrompt">複製提示詞</button>
+      </div>
+
+      <div class="lb__actions">
+        <a class="ig-btn ig-btn--gold" id="lbDl" href="#" download>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M12 4v11m0 0-4-4m4 4 4-4M5 20h14"/></svg>
+          下載這張
+        </a>
+        <button class="ig-btn ig-btn--ghost" type="button" id="lbZip">打包這套</button>
+      </div>
+      <p class="lb__keys"><kbd class="ig-kbd">←</kbd><kbd class="ig-kbd">→</kbd> 換姿勢　<kbd class="ig-kbd">↑</kbd><kbd class="ig-kbd">↓</kbd> 換機位　<kbd class="ig-kbd">1</kbd>–<kbd class="ig-kbd">5</kbd> 換格式</p>
+    </aside>
+  </div>
+</dialog>
+
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+<script src="data/poses.js?v=1.0.2"></script>
+<script src="assets/ink-gold-ui.js?v=1.0.2"></script>
+<script src="assets/app.js?v=1.0.2"></script>
+</body>
+</html>
