@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>南瓜素材庫 · 服裝、道具、家具、動物、場景、光線</title>
+<meta name="description" content="771 件素材、六大類：服裝、道具、家具、動物、場景、光線，每件多角度。跟姿勢一起搭，搭配盤幫你組好整段英文提示詞。">
+<meta property="og:title" content="南瓜素材庫 · 六大類 771 件素材">
+<meta property="og:description" content="挑好姿勢，再配衣服、道具、場景和光線，一整段提示詞直接帶走。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='10' fill='%232D2B2C'/%3E%3Ccircle cx='16' cy='9.5' r='3.2' fill='%23FDC302'/%3E%3Cpath d='M16 13.5v7.5m0 0-4.5 5.5M16 21l4.5 5.5M10 16.5l6-2 6 2' stroke='%23FDC302' stroke-width='2.2' stroke-linecap='round' fill='none'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;900&family=Roboto+Mono:wght@400;500&family=Noto+Sans+TC:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/ink-gold.css?v=1.1.0">
+<link rel="stylesheet" href="assets/app.css?v=1.1.0">
+</head>
+<body class="ig ig-directory">
+
+<a class="skip" href="#items">跳到素材列表</a>
+
+<nav class="ig-nav" aria-label="主選單">
+  <a class="ig-nav__brand" href="./" aria-label="南瓜姿勢庫 首頁">
+    <img class="ig-brand-logo" src="assets/brand/pumpkin-logo-black.svg" alt="南瓜虛擬科技">
+  </a>
+  <div class="ig-nav__links">
+    <a class="ig-nav__link" href="./#poses">姿勢</a>
+    <a class="ig-nav__link is-active" href="library.html" aria-current="page">素材庫</a>
+    <a class="ig-nav__link" href="#pairing">怎麼搭</a>
+  </div>
+  <div class="ig-nav__right">
+    <button class="ig-theme-toggle" type="button" data-ig-theme-toggle aria-label="切換深色模式" aria-pressed="false"></button>
+    <a class="ig-btn ig-btn--line ig-btn--sm" href="./#poses">回姿勢</a>
+  </div>
+</nav>
+
+<main class="ig-container">
+
+  <header class="hero hero--lib">
+    <p class="ig-eyebrow">Pumpkin Asset Library · 南瓜素材庫</p>
+    <h1 class="hero__title">穿什麼、拿什麼、<br class="br-m"><span class="ig-mark">站在哪裡</span></h1>
+    <p class="hero__lead"><b id="heroTotal">771</b> 件素材、六大類，每件都有多個角度。跟姿勢一起搭，搭配盤會把整段英文提示詞組好給你。</p>
+  </header>
+
+  <nav class="libs" id="libTabs" aria-label="素材庫"></nav>
+
+  <section class="gallery gallery--lib" id="items" aria-labelledby="libTitle">
+    <div class="gallery__head">
+      <div>
+        <h2 class="sec-title" id="libTitle"><span id="libName"></span> <span class="sec-count ig-num" id="count" aria-live="polite"></span></h2>
+        <p class="sec-lead" id="libSub"></p>
+      </div>
+      <label class="ig-search gallery__search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <span class="sr">搜尋素材</span>
+        <input id="search" type="search" placeholder="搜尋名稱、編號，例如：旗袍、C050" autocomplete="off">
+        <kbd class="ig-kbd" aria-hidden="true">/</kbd>
+      </label>
+    </div>
+
+    <div class="ig-pills" id="catPills" role="group" aria-label="分類"></div>
+    <div class="ig-pills cats" id="subPills" role="group" aria-label="細分類"></div>
+
+    <div class="toolbar" id="toolbar">
+      <div class="seg" role="group" aria-label="角度" id="viewSeg"></div>
+      <div class="seg" role="group" aria-label="性別" id="genderSeg"></div>
+      <button class="switch" id="adult" type="button" role="switch" aria-checked="false">
+        <span class="switch__text">性感服裝：<b id="adultState">模糊</b></span><span class="switch__track" aria-hidden="true"><i></i></span>
+      </button>
+    </div>
+
+    <div class="grid" id="grid"></div>
+    <div class="empty" id="empty" hidden>
+      <p class="empty__title">沒有找到符合的素材</p>
+      <p class="empty__hint">換個關鍵字，或把篩選條件放寬一點。</p>
+      <button class="ig-btn ig-btn--ink ig-btn--sm" type="button" id="clearAll">清除所有條件</button>
+    </div>
+    <div class="more"><button class="ig-btn ig-btn--ghost" type="button" id="more" hidden></button></div>
+  </section>
+
+  <!-- ── 怎麼搭 ── -->
+  <section class="howto" id="pairing" aria-labelledby="pairTitle">
+    <h2 class="sec-title" id="pairTitle">三步驟，搭出一整段提示詞</h2>
+    <p class="sec-lead">姿勢管動作，素材庫管穿什麼、拿什麼、在哪裡、光怎麼打。每一格各挑一件，搭配盤會依固定順序把英文片語接起來。</p>
+    <ol class="steps">
+      <li class="steps__item"><span class="steps__n ig-num">1</span><b>挑一個姿勢</b><p>在姿勢頁打開大圖，按「加入搭配」。</p></li>
+      <li class="steps__item"><span class="steps__n ig-num">2</span><b>各庫挑一件</b><p>服裝、道具、家具、動物、場景、光線，需要的才挑，每格最多一件。</p></li>
+      <li class="steps__item"><span class="steps__n ig-num">3</span><b>複製或打包</b><p>右下角打開搭配盤：複製整段英文提示詞，或把這組圖一起打包下載。</p></li>
+    </ol>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <img class="ig-brand-logo foot__logo" src="assets/brand/pumpkin-logo-black.svg" alt="南瓜虛擬科技">
+  <p>南瓜素材庫 · 給 AI 繪圖、3D 擺姿與分鏡用的服裝、道具、場景參考</p>
+  <p class="foot__note">圖中人物皆為無臉人台或 AI 生成，不涉及真實人物與品牌。圖片可免費用於個人與商業創作。</p>
+</footer>
+
+<!-- ── 素材大圖 ── -->
+<dialog class="lb" id="lb" aria-labelledby="lbName">
+  <div class="lb__wrap">
+    <div class="lb__stage" id="lbStage">
+      <div class="lb__single" id="lbSingle"><img id="lbImg" alt=""></div>
+      <button class="lb__nav prev" type="button" id="lbPrev" aria-label="上一件"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m15 5-7 7 7 7"/></svg></button>
+      <button class="lb__nav next" type="button" id="lbNext" aria-label="下一件"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></button>
+    </div>
+
+    <aside class="lb__panel">
+      <div class="lb__top">
+        <p class="lb__meta" id="lbMeta"></p>
+        <button class="lb__close lb__link" type="button" id="lbLink" aria-label="複製這件的連結" title="複製連結"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M10 14a4.5 4.5 0 0 0 6.4 0l3-3a4.5 4.5 0 0 0-6.4-6.4l-1 1"/><path d="M14 10a4.5 4.5 0 0 0-6.4 0l-3 3a4.5 4.5 0 0 0 6.4 6.4l1-1"/></svg></button>
+        <button class="lb__close" type="button" id="lbClose" aria-label="關閉"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+      </div>
+      <h3 class="lb__name" id="lbName"></h3>
+      <p class="lb__en" id="lbEn" lang="en"></p>
+
+      <p class="lb__label">角度</p>
+      <div class="lb__angles" id="lbAngles" role="group" aria-label="角度"></div>
+
+      <div class="lb__prompt">
+        <p class="lb__label">AI 描述（英文）</p>
+        <p class="lb__desc" id="lbDesc" lang="en"></p>
+        <button class="lb__copy" type="button" id="lbCopyPrompt">複製描述</button>
+      </div>
+
+      <div class="lb__actions">
+        <a class="ig-btn ig-btn--gold" id="lbDl" href="#" download>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M12 4v11m0 0-4-4m4 4 4-4M5 20h14"/></svg>
+          下載這張
+        </a>
+        <button class="ig-btn ig-btn--ghost" type="button" id="lbPair"></button>
+        <button class="ig-btn ig-btn--ghost" type="button" id="lbZip">打包這件</button>
+      </div>
+      <p class="lb__keys"><kbd class="ig-kbd">←</kbd><kbd class="ig-kbd">→</kbd> 換一件　<kbd class="ig-kbd">↑</kbd><kbd class="ig-kbd">↓</kbd> 換角度　<kbd class="ig-kbd">P</kbd> 加入搭配</p>
+    </aside>
+  </div>
+</dialog>
+
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+<script src="data/library.js?v=1.1.0"></script>
+<script src="assets/ink-gold-ui.js?v=1.1.0"></script>
+<script src="assets/tray.js?v=1.1.0"></script>
+<script src="assets/library.js?v=1.1.0"></script>
+</body>
+</html>

@@ -459,6 +459,7 @@
     dl.setAttribute('download', 'pumpkin-pose_' + p.id + '_' + VIEWS[v] + '_' + k + '.webp');
     const total = FMTS.reduce((a, x) => a + filesOf(p, x.k).filter(Boolean).length, 0);
     $('lbZip').textContent = '打包這套（' + total + ' 張）';
+    renderPairBtn();
 
     const i = LB.list.indexOf(p);
     $('lbPrev').disabled = LB.list.length < 2;
@@ -533,6 +534,30 @@
     const [k, v] = b.dataset.ov.split(',');
     LB.k = k; LB.v = +v; LB.mode = 'single'; fixLbView(); renderLb();
   });
+  /* 搭配盤（assets/tray.js）：姿勢佔第一格，存目前看的機位和格式那張圖 */
+  const Tray = window.PumpkinTray;
+  function renderPairBtn() {
+    const b = $('lbPair');
+    if (!Tray) { b.hidden = true; return; }
+    const t = Tray.get('pose');
+    const here = t && t.id === LB.p.id;
+    b.textContent = here ? '✓ 已在搭配盤' : '加入搭配';
+    b.setAttribute('aria-pressed', String(!!here));
+    b.title = here ? '再按一次從搭配盤移除' : (t ? '會取代搭配盤裡的「' + t.n + '」' : '把這個姿勢放進搭配盤，再去素材庫配衣服、場景');
+  }
+  function togglePair() {
+    if (!Tray) return;
+    const p = LB.p, k = LB.k, f = filesOf(p, k)[LB.v];
+    const t = Tray.get('pose');
+    if (t && t.id === p.id) { Tray.remove('pose'); toast('已從搭配盤移除'); return; }
+    Tray.add('pose', {
+      id: p.id, n: p.n, view: VIEW_NAMES[LB.v] + FMT[k].long, kind: k === 'line' ? 'line' : k,
+      img: src(k, 'w300', f), big: src(k, 'w900', f), clause: p.d || p.en
+    });
+  }
+  $('lbPair').addEventListener('click', togglePair);
+  document.addEventListener('pp:tray', () => { if (dlg.open) renderPairBtn(); });
+
   $('lbCopyPrompt').addEventListener('click', () => copy(LB.p.d || LB.p.en, '英文提示詞已複製，貼進 AI 工具就能用'));
   $('lbLink').addEventListener('click', () => copy(location.href.split('#')[0] + '#' + LB.p.id, '連結已複製'));
   $('lbZip').addEventListener('click', () => {
@@ -548,6 +573,7 @@
     else if (e.key === 'ArrowDown') { e.preventDefault(); stepAngle(1); }
     else if (e.key === 'ArrowUp') { e.preventDefault(); stepAngle(-1); }
     else if (/^[1-5]$/.test(e.key)) { setFmt(FMTS[+e.key - 1].k); }
+    else if (e.key === 'p' || e.key === 'P') { e.preventDefault(); togglePair(); }
   });
   // 手機左右滑換姿勢
   let touch = null;
@@ -673,7 +699,21 @@
   const m = /^#([A-Z]\d{3})$/.exec(location.hash);
   const linked = m && byId.get(m[1]);
   if (linked) S.revealed.add(linked.id);
+  // 首頁的素材庫入口（資料在 data/libs-meta.js，只有六筆）
+  function renderLibs() {
+    const libs = window.PUMPKIN_LIBS;
+    const box = $('libHome');
+    if (!libs || !box) return;
+    box.innerHTML = libs.map((l) => {
+      const line = l.kind === 'line';
+      return '<a class="libtab" href="library.html?lib=' + l.key + '">' +
+        '<span class="libtab__th"' + (line ? ' data-fmt="line"' : '') + '><img' + (line ? ' class="fmt-line"' : '') + ' src="images/' + l.key + '/w300/' + l.thumb + '" alt="" width="300" height="400" loading="lazy"></span>' +
+        '<span class="libtab__text"><b>' + esc(l.name) + '</b><small><span class="ig-num">' + l.n + '</span> ' + esc(l.unit) + ' · ' + esc(l.role) + '</small></span></a>';
+    }).join('');
+  }
+
   renderHero();
+  renderLibs();
   renderHowto();
   renderDl();
   refresh();

@@ -11,8 +11,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;900&family=Roboto+Mono:wght@400;500&family=Noto+Sans+TC:wght@400;500;600;700;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/ink-gold.css?v=1.0.2">
-<link rel="stylesheet" href="assets/app.css?v=1.0.2">
+<link rel="stylesheet" href="assets/ink-gold.css?v=1.1.0">
+<link rel="stylesheet" href="assets/app.css?v=1.1.0">
 </head>
 <body class="ig ig-directory">
 
@@ -24,6 +24,7 @@
   </a>
   <div class="ig-nav__links">
     <a class="ig-nav__link is-active" href="#poses" aria-current="page">姿勢</a>
+    <a class="ig-nav__link" href="library.html">素材庫</a>
     <a class="ig-nav__link" href="#howto">怎麼用</a>
     <a class="ig-nav__link" href="#download">下載圖包</a>
   </div>
@@ -84,6 +85,13 @@
       <button class="ig-btn ig-btn--ink ig-btn--sm" type="button" id="clearAll">清除所有條件</button>
     </div>
     <div class="more"><button class="ig-btn ig-btn--ghost" type="button" id="more" hidden></button></div>
+  </section>
+
+  <!-- ── 素材庫入口 ── -->
+  <section class="libhome" id="library" aria-labelledby="libhomeTitle">
+    <h2 class="sec-title" id="libhomeTitle">還缺衣服、道具、場景？</h2>
+    <p class="sec-lead">六個素材庫跟姿勢一起搭：挑好姿勢，再從各庫各挑一件，右下角的搭配盤會把整段英文提示詞組好給你。</p>
+    <nav class="libs" id="libHome" aria-label="素材庫"></nav>
   </section>
 
   <!-- ── 怎麼用 ── -->
@@ -177,17 +185,20 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M12 4v11m0 0-4-4m4 4 4-4M5 20h14"/></svg>
           下載這張
         </a>
+        <button class="ig-btn ig-btn--ghost" type="button" id="lbPair">加入搭配</button>
         <button class="ig-btn ig-btn--ghost" type="button" id="lbZip">打包這套</button>
       </div>
-      <p class="lb__keys"><kbd class="ig-kbd">←</kbd><kbd class="ig-kbd">→</kbd> 換姿勢　<kbd class="ig-kbd">↑</kbd><kbd class="ig-kbd">↓</kbd> 換機位　<kbd class="ig-kbd">1</kbd>–<kbd class="ig-kbd">5</kbd> 換格式</p>
+      <p class="lb__keys"><kbd class="ig-kbd">←</kbd><kbd class="ig-kbd">→</kbd> 換姿勢　<kbd class="ig-kbd">↑</kbd><kbd class="ig-kbd">↓</kbd> 換機位　<kbd class="ig-kbd">1</kbd>–<kbd class="ig-kbd">5</kbd> 換格式　<kbd class="ig-kbd">P</kbd> 加入搭配</p>
     </aside>
   </div>
 </dialog>
 
 <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
 
-<script src="data/poses.js?v=1.0.2"></script>
-<script src="assets/ink-gold-ui.js?v=1.0.2"></script>
-<script src="assets/app.js?v=1.0.2"></script>
+<script src="data/poses.js?v=1.1.0"></script>
+<script src="data/libs-meta.js?v=1.1.0"></script>
+<script src="assets/ink-gold-ui.js?v=1.1.0"></script>
+<script src="assets/tray.js?v=1.1.0"></script>
+<script src="assets/app.js?v=1.1.0"></script>
 </body>
 </html>

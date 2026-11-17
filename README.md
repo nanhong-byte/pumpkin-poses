@@ -5,28 +5,30 @@
 
 <h1 align="center">🧍 南瓜姿勢庫</h1>
 
-<p align="center"><b>280 套無臉素體姿勢 × 五個機位 × 五種格式，拖進 AI 繪圖工具，姿勢就定住了</b></p>
+<p align="center"><b>280 套無臉素體姿勢 × 五個機位 × 五種格式，再配上 771 件服裝、道具、場景素材，拖進 AI 繪圖工具就定住了</b></p>
 
 <p align="center">
   <a href="https://nanhong-byte.github.io/pumpkin-poses/"><img src="https://img.shields.io/badge/線上試用-開啟姿勢庫-FDC302?style=flat-square&labelColor=161415" alt="線上試用"></a>
   <img src="https://img.shields.io/badge/姿勢-280%20套-F5F5F5?style=flat-square&labelColor=161415" alt="280 套姿勢">
-  <img src="https://img.shields.io/badge/圖片-4,133%20張-F5F5F5?style=flat-square&labelColor=161415" alt="4,133 張圖">
+  <img src="https://img.shields.io/badge/素材-771%20件-F5F5F5?style=flat-square&labelColor=161415" alt="771 件素材">
+  <img src="https://img.shields.io/badge/圖片-6,917%20張-F5F5F5?style=flat-square&labelColor=161415" alt="6,917 張圖">
   <img src="https://img.shields.io/badge/介面-繁體中文-F5F5F5?style=flat-square&labelColor=161415" alt="繁體中文">
 </p>
 
 <p align="center">
   <a href="#-五種格式">格式</a> •
+  <a href="#-素材庫與搭配盤">素材庫</a> •
   <a href="#-快速開始">快速開始</a> •
   <a href="#-怎麼用">怎麼用</a> •
   <a href="#-搭配-ai-工具">搭配 AI 工具</a> •
   <a href="#-常見問題">常見問題</a>
 </p>
 
-**南瓜姿勢庫**是一個免費的姿勢參考網站：280 套沒有臉的素體姿勢，每套最多五個機位，多數機位還附白模、深度圖和法線圖。
+**南瓜姿勢庫**是一個免費的姿勢參考網站：280 套沒有臉的素體姿勢，每套最多五個機位，多數機位還附白模、深度圖和法線圖。另外還有六個素材庫：服裝、道具、家具、動物、場景、光線，共 771 件，可以跟姿勢搭成一整組。
 
 用 AI 生圖最難搞的就是姿勢，提示詞寫半天手腳還是亂長；用 3D 軟體擺一個 Pose 又要十幾分鐘。這裡挑一張圖丟進 ComfyUI、Nano Banana 或 ChatGPT，姿勢一次到位。
 
-看完這篇，你會知道每種格式該配哪個工具、怎麼一次打包下載整個系列，也能在自己電腦上架一份。
+看完這篇，你會知道每種格式該配哪個工具、怎麼用搭配盤組出一整段提示詞、怎麼一次打包下載整個系列，也能在自己電腦上架一份。
 
 <p align="center"><img src="docs/images/hero-framed.png" width="760" alt="南瓜姿勢庫首頁：置中標題、金色瀏覽按鈕、姿勢縮圖跑馬燈與篩選列"></p>
 
@@ -37,6 +39,7 @@
 - [🎨 五種格式](#-五種格式)
 - [📐 五個機位](#-五個機位)
 - [📚 姿勢分類](#-姿勢分類)
+- [🧺 素材庫與搭配盤](#-素材庫與搭配盤)
 - [🚀 快速開始](#-快速開始)
 - [📖 怎麼用](#-怎麼用)
 - [🤖 搭配 AI 工具](#-搭配-ai-工具)
@@ -60,6 +63,8 @@
 | 📦 | **瀏覽器打包下載** | 勾系列、勾格式，按一下就打包成 ZIP，資料夾分好類 |
 | 🌙 | **夜間模式＋手機版** | 線稿在夜間自動反白，不刺眼；手機也能順順地滑 |
 | 🙈 | **敏感姿勢先模糊** | 性感、雙人類姿勢預設模糊，點一下才顯示，在公司打開不尷尬 |
+| 🧺 | **六個素材庫** | 服裝、道具、家具、動物、場景、光線共 771 件，每件都有多個角度 |
+| 🪄 | **搭配盤** | 一個姿勢＋各庫各挑一件，自動接成一整段英文提示詞，整組圖還能一起打包 |
 
 ## 🤔 為什麼做這個
 
@@ -124,6 +129,101 @@ flowchart LR
 | **上半身** | 80 | 性感系 30、可愛系 25、胸線強調系 25 |
 | **全身・性感** | 80 | 躺姿 20、站姿 15、坐姿 15、跪姿・爬姿 15、特殊 15 |
 | **雙人** | 49 | 面對面躺姿 10、一前一後 7、背對著坐 6、坐在上方 5、站立 4、貼臉系 4、站立貼近 4、側臥 3、坐姿 2、面對面坐 2、坐著貼近 1、躺臥 1 |
+
+## 🧺 素材庫與搭配盤
+
+姿勢管「動作」，素材庫管「穿什麼、拿什麼、在哪裡、光怎麼打」。六個庫共 771 件，每件都是多角度的參考圖，跟姿勢一樣能篩選、看大圖、下載、打包。
+
+從首頁導覽列的「素材庫」，或首頁中段「還缺衣服、道具、場景？」那一排卡片進去。
+
+<p align="center"><img src="docs/images/library-framed.png" width="760" alt="素材庫頁面：上方六個庫的切換卡，下方是分類膠囊、角度與性別切換"></p>
+
+| 庫 | 件數 | 角度 | 分類（件數） | 適合拿來 |
+|---|---:|---|---|---|
+| 👗 **服裝** | 484 | 正面、斜側、側面、背面 | 中國歷代 57、世界民族 54、現代日常 78、正式與禮服 30、運動與戶外 29、職業與制服 30、西方歷史 30、原創幻想 40、節慶與派對 20、居家泳裝與內衣 30、帽子與包包 60、性感服裝 26 | 換裝、角色設定、服裝考據 |
+| 🎻 **道具** | 32 | 正面、背面、側面、斜側 | 樂器 10、古風與復古器物 10、手持與運動器材 12 | 手上拿著東西的姿勢 |
+| 🪑 **家具** | 41 | 正面、背面、側面、斜側、俯視 | 坐臥家具 16、桌台 5、中式與世界風格 11、造型台與布景 9 | 坐、靠、倚的姿勢 |
+| 🐈 **動物** | 100 | 正面、斜側、側面、俯視、仰視 | 貓 26、狗 31、小型寵物 7、馬與家畜 9、鳥 7、野生動物 11、幻想生物 9 | 人跟寵物同框、坐騎 |
+| 🌆 **場景** | 64 | 平視、俯視、仰視 | 室內 14、城市戶外 12、自然與度假 17、古風與奇幻 15、攝影棚背景 6 | 背景、透視參考 |
+| 💡 **光線** | 50 | 正面、斜側、側面 | 時段自然光 11、空間自然光 11、人造光源 11、攝影棚光位 10、氛圍與色彩 7 | 打光參考、氛圍定調 |
+
+服裝用「隱形人台」拍：只看得到衣服本身的立體形狀，版型、領口、開衩都很清楚。動物跟姿勢同一種線稿畫法，夜間模式一樣會反白。不是每件都有齊全部角度，品質不夠的角度直接拿掉，卡片上灰掉的角度按鈕就是沒有。
+
+### 找素材：分類、細分類、角度
+
+1. 上方六張卡片切換素材庫。
+2. 點分類膠囊，例如「中國歷代」，下面會再長出一排細分類：商、漢、魏晉、唐、宋、元、明、清、民國。
+3. 服裝多一個「全部／女裝／男裝／中性」切換；性感服裝跟敏感姿勢一樣預設模糊，開關也共用。
+4. 「主角度」是每件最有代表性的那一面；切到「背面」或「俯視」，整頁就一起換角度。
+
+**預期結果**：選「服裝 → 中國歷代 → 明」再切「男裝」，會剩 6 件，網址也會變成 `library.html?lib=costume&cat=HC&sub=明&g=M`，可以直接分享。
+
+<p align="center"><img src="docs/images/library-scene-framed.png" width="760" alt="場景庫：現代客廳、臥室、和室、咖啡館等場景卡片，四欄排列"></p>
+
+### 看大圖：換角度、複製描述、加入搭配
+
+點卡片打開大圖。右邊有全部角度的縮圖，下面是一段完整的英文描述，想單獨生成這件東西時可以直接拿去用。
+
+| 按鈕／按鍵 | 作用 |
+|---|---|
+| **下載這張**（金色） | 下載目前角度的 900px 大圖 |
+| **加入搭配**／<kbd>P</kbd> | 把這件放進搭配盤；再按一次就拿出來 |
+| **打包這件** | 這件的所有角度打包成 ZIP |
+| <kbd>←</kbd> <kbd>→</kbd> | 換上一件、下一件 |
+| <kbd>↑</kbd> <kbd>↓</kbd> | 換角度 |
+| 連結按鈕 | 複製這件的專屬網址，例如 `library.html#C052` |
+
+<p align="center"><img src="docs/images/library-lightbox-framed.png" width="760" alt="素材大圖：改良旗袍正面大圖，右邊四個角度縮圖、英文描述、下載與加入搭配按鈕"></p>
+
+### 搭配盤：一個姿勢＋六庫各一件
+
+搭配盤就像購物車，只是裝的是姿勢和素材。七個格子：姿勢、服裝、道具、家具、動物、場景、光線，每格最多一件，需要的才挑。
+
+<p align="center"><img src="docs/images/pairing.png" width="760" alt="一組搭配範例：站立回眸的姿勢線稿，加上孔雀藍改良旗袍、紅底梅花油紙傘、江南水鄉、黃金時刻逆光"></p>
+
+**怎麼用：**
+
+1. 在姿勢頁打開一套姿勢，按「加入搭配」。存進去的是你當下看的那個機位和格式。
+2. 到素材庫，各庫挑想要的那一件，一樣按「加入搭配」。
+3. 右下角會出現深色的「搭配盤」按鈕，點開就看到整組。
+
+**預期結果**：面板下方的「合成英文提示詞」已經依「姿勢 → 服裝 → 道具 → 家具 → 動物 → 場景 → 光線」接好。按金色「複製提示詞」就能貼進生圖工具，按「打包這組圖」會把每一格的大圖打成一個 ZIP。
+
+<p align="center"><img src="docs/images/tray-framed.png" width="760" alt="搭配盤面板：已挑 5 件，左右兩欄格子，下方是合成英文提示詞與複製、打包、清空按鈕"></p>
+
+每一格接進提示詞的樣子：
+
+| 格子 | 接進去的樣子 |
+|---|---|
+| 姿勢 | 姿勢的英文描述原文 |
+| 服裝 | `wearing …` |
+| 道具 | `holding …` |
+| 家具 | `on or next to …` |
+| 動物 | `with a … nearby (…)` |
+| 場景 | `setting: …` |
+| 光線 | `lighting: …` |
+
+<details>
+<summary><b>上面那組搭配實際組出來的提示詞</b></summary>
+
+實際上是一整段，這裡為了好讀，每一格換一行：
+
+```text
+standing with her body turned mostly away from the camera, looking back over her shoulder toward the camera,
+wearing dark teal fitted qipao, mandarin collar, diagonal right opening with black frog buttons, cap sleeves, calf length, side slits to the knee, black piping,
+holding open oil-paper umbrella, shallow dome deep red canopy, painted with one branch of white plum blossom near the rim, thin bamboo ribs radiating from a wrapped top cap, woven thread band inside, straight bamboo shaft and handle,
+setting: canal along the left edge with stone embankment, whitewashed two-storey houses with black frames and grey tile roofs across the canal, horse-head gables, humpbacked stone bridge in the distance, shuttered shopfront with blank signboard and red lanterns on the right, granite flagstones, empty moored boat, empty centre flagstones,
+lighting: low sun directly behind, golden rim on the outline, soft front shade, shadow toward the camera
+```
+
+</details>
+
+> [!TIP]
+> 用 Nano Banana、ChatGPT 這類能吃多張參考圖的工具時，把「姿勢線稿＋服裝圖」一起丟進去，再貼搭配盤的提示詞，衣服的版型會比只靠文字準很多。
+
+搭配盤記在這台電腦的瀏覽器裡，換頁、關掉再開都還在；同一格再加別的會直接取代，按「清空」就整組重來。
+
+<p align="center"><img src="docs/images/library-mobile.png" width="760" alt="手機版三個畫面：素材列表、大圖檢視、從底部滑上來的搭配盤"></p>
 
 <p align="center"><img src="docs/divider.svg" width="120" alt=""></p>
 
@@ -295,33 +395,41 @@ masterpiece, cinematic photo, sitting on the floor with one knee raised and bent
 ```mermaid
 %%{init: {'theme':'base','themeVariables':{'fontFamily':'PingFang TC, Microsoft JhengHei, Noto Sans TC, sans-serif','primaryColor':'#FFFFFF','primaryTextColor':'#161415','primaryBorderColor':'#161415','lineColor':'#8A6400','secondaryColor':'#FDE68A','tertiaryColor':'#F5F5F5','clusterBkg':'#F5F5F5','clusterBorder':'#D9D9D9','edgeLabelBackground':'#F5F5F5'}}}%%
 flowchart LR
-  D["📄 data/poses.js<br/>280 套姿勢資料"] --> A["⚙️ assets/app.js<br/>篩選、大圖、打包"]
-  I["🖼️ images/<br/>五格式 × 三尺寸"] --> A
-  A --> G["姿勢列表"]
-  A --> L["大圖檢視"]
-  A --> Z["ZIP 打包<br/>（JSZip）"]
-  S["🖋 墨金美學<br/>ink-gold.css＋ink-gold-ui.js"] --> G
-  S --> L
+  D["📄 data/poses.js<br/>280 套姿勢"] --> A["⚙️ assets/app.js<br/>姿勢頁 index.html"]
+  LD["📄 data/library.js<br/>771 件素材"] --> B["⚙️ assets/library.js<br/>素材庫頁 library.html"]
+  I["🖼️ images/<br/>姿勢五格式＋六個素材庫"] --> A
+  I --> B
+  A --> T["🧺 assets/tray.js<br/>搭配盤（存在瀏覽器）"]
+  B --> T
+  T --> P["整段英文提示詞<br/>＋整組圖 ZIP"]
+  S["🖋 墨金美學<br/>ink-gold.css＋ink-gold-ui.js"] --> A
+  S --> B
 ```
 
 ```text
 pumpkin-poses/
-├─ index.html              ← 唯一的頁面
+├─ index.html              ← 姿勢頁
+├─ library.html            ← 素材庫頁
 ├─ assets/
 │  ├─ ink-gold.css         ← 墨金美學設計套件（紙、墨、金、元件）
 │  ├─ ink-gold-ui.js       ← 會向游標聚攏的點陣背景＋日夜切換
-│  ├─ app.css              ← 這個網站自己的樣式（卡片、大圖、下載區）
-│  ├─ app.js               ← 主程式
+│  ├─ app.css              ← 兩頁共用的樣式（卡片、大圖、下載區、搭配盤）
+│  ├─ app.js               ← 姿勢頁主程式
+│  ├─ library.js           ← 素材庫頁主程式
+│  ├─ tray.js              ← 搭配盤＋兩頁共用的小工具
 │  └─ brand/               ← 南瓜 Logo
 ├─ data/
-│  └─ poses.js             ← 姿勢資料（名稱、分類、提示詞、檔名）
+│  ├─ poses.js             ← 姿勢資料（名稱、分類、提示詞、檔名）
+│  ├─ library.js           ← 素材資料（771 件）
+│  └─ libs-meta.js         ← 六個庫的名稱、件數、封面（首頁入口用）
 ├─ images/
-│  ├─ line/   clay/   depth/   normal/   photo/
+│  ├─ line/   clay/   depth/   normal/   photo/                ← 姿勢
+│  ├─ costume/   prop/   furniture/   animal/   scene/   light/ ← 素材庫
 │  │  └─ w300/  w600/  w900/
 └─ docs/                   ← 這篇 README 用的圖
 ```
 
-介面用的是南瓜自己的設計語言「墨金美學」：淡紙承載內容、墨字建立順序、金色只標下一步。所以整頁只有「瀏覽姿勢」「下載這張」「打包下載」這幾顆主按鈕是金色的。
+介面用的是南瓜自己的設計語言「墨金美學」：淡紙承載內容、墨字建立順序、金色只標下一步。所以只有「瀏覽姿勢」「下載這張」「打包下載」「複製提示詞」這幾顆主按鈕是金色的。
 
 <details>
 <summary><b>一筆姿勢資料長什麼樣</b></summary>
@@ -355,7 +463,43 @@ pumpkin-poses/
 </details>
 
 <details>
+<summary><b>一筆素材資料長什麼樣</b></summary>
+
+```json
+{
+  "id": "C052",
+  "l": "costume",
+  "c": "HC",
+  "s": "民國",
+  "n": "改良旗袍（孔雀藍）",
+  "en": "1930s Qipao (Peacock Teal)",
+  "d": "a 1930s Chinese women's qipao in dark teal silk: a standing mandarin collar, ...",
+  "k": "dark teal fitted qipao, mandarin collar, diagonal right opening, ...",
+  "f": ["costume_C052_front.webp", "costume_C052_diag.webp", "costume_C052_side.webp", "costume_C052_back.webp"],
+  "m": 0,
+  "g": "F"
+}
+```
+
+| 欄位 | 意思 |
+|---|---|
+| `id` | 編號，C＝服裝、T＝道具、F＝家具、A＝動物、E＝場景、L＝光線 |
+| `l`、`c`、`s` | 屬於哪個庫、分類代碼、細分類 |
+| `n`、`en` | 中文名稱、英文名稱 |
+| `d` | 完整英文描述（大圖裡「複製描述」用） |
+| `k` | 精簡英文描述（搭配盤接提示詞用） |
+| `f` | 各角度檔名，順序跟該庫的角度清單一樣；`null` 代表沒有這個角度 |
+| `m` | 主角度是第幾個 |
+| `x` | 1＝性感服裝，預設模糊 |
+| `g` | 服裝才有：`F` 女裝、`M` 男裝、`U` 中性 |
+| `sp` | 動物才有：英文物種名，搭配盤用 |
+
+</details>
+
+<details>
 <summary><b>網址參數：做連結時可以直接帶</b></summary>
+
+**姿勢頁（index.html）**
 
 | 參數 | 例子 | 效果 |
 |---|---|---|
@@ -367,6 +511,18 @@ pumpkin-poses/
 | `q` | `?q=托腮` | 帶搜尋字 |
 | `theme` | `?theme=night` | 夜間模式 |
 | `#編號` | `#P012` | 直接打開那套姿勢的大圖 |
+
+**素材庫頁（library.html）**
+
+| 參數 | 例子 | 效果 |
+|---|---|---|
+| `lib` | `?lib=scene` | 打開某個庫（`costume`／`prop`／`furniture`／`animal`／`scene`／`light`） |
+| `cat` | `?lib=costume&cat=HC` | 只看某個分類（用分類代碼） |
+| `sub` | `&sub=明` | 只看某個細分類 |
+| `g` | `&g=F` | 服裝性別（`F`／`M`／`U`） |
+| `view` | `&view=back` | 整頁換成某個角度 |
+| `q` | `&q=旗袍` | 帶搜尋字 |
+| `#編號-角度` | `#C052-side` | 直接打開那件素材的某個角度 |
 
 </details>
 
@@ -382,6 +538,9 @@ pumpkin-poses/
 | **img2img** | 拿一張圖當底，叫 AI 在上面重畫 | 白模最常這樣用 |
 | **機位** | 鏡頭擺在哪、從哪個角度拍 | 正面、斜側、側面、俯視、仰視 |
 | **WebP** | 比 PNG 小很多的圖片格式 | 本站所有圖的格式 |
+| **隱形人台** | 衣服穿在假人身上拍，再把假人修掉，只留下衣服的立體形狀 | 服裝庫的拍法 |
+| **搭配盤** | 本站的「購物車」，只是裝的是姿勢和素材 | 一鍵組出整段提示詞 |
+| **localStorage** | 瀏覽器幫網站在你電腦裡記的小筆記 | 搭配盤、日夜模式、模糊開關都記在這 |
 
 ## ❓ 常見問題
 
@@ -416,6 +575,12 @@ pumpkin-poses/
 </details>
 
 <details>
+<summary><b>搭配盤會不會不見？</b></summary>
+
+搭配盤記在這台電腦的這個瀏覽器裡：換頁、關掉分頁、隔天再開都還在。換一台電腦、換瀏覽器，或用無痕視窗，就看不到原本那組。想留著的組合，先按「複製提示詞」貼到筆記裡最保險。
+</details>
+
+<details>
 <summary><b>AI 工具不吃 WebP 怎麼辦？</b></summary>
 
 主流工具（ComfyUI、Nano Banana、ChatGPT、Midjourney）都直接吃 WebP。真的遇到不吃的，用 Windows 的「小畫家」打開再另存成 PNG 就好。
@@ -427,7 +592,7 @@ pumpkin-poses/
 1. 把圖片轉成 WebP，做成 300、600、900 三種寬度（線稿和白模類用 3:4 直式），分別放進 `images/<格式>/w300`、`w600`、`w900`。
 2. 在 `data/poses.js` 的 `poses` 陣列加一筆，格式照上面「一筆姿勢資料長什麼樣」。
 3. 如果是新分類，在同檔案的 `series` 裡把分類名稱和數量也補上。
-4. 改 `index.html` 裡的 `?v=1.0.2` 版本號，讓瀏覽器重新抓檔案。
+4. 改 `index.html` 裡的 `?v=1.1.0` 版本號，讓瀏覽器重新抓檔案。
 
 **預期結果**：重新整理後，新姿勢出現在列表最後面，搜尋得到。
 </details>
@@ -438,10 +603,11 @@ pumpkin-poses/
 - [x] 全站台灣繁體中文、墨金美學介面、夜間模式、手機版
 - [x] 瀏覽器直接打包 ZIP、單套打包、專屬分享連結
 - [x] 線稿與白模、深度圖、法線圖左右對照
-- [ ] 素材庫：服裝、道具、家具、動物、場景、光線，搭配姿勢一起挑
+- [x] 素材庫：服裝、道具、家具、動物、場景、光線，共 771 件
+- [x] 搭配盤：一個姿勢＋六庫各一件，自動組出整段英文提示詞
 - [ ] 中文版 AI 提示詞
 - [ ] 下載時可選 PNG
-- [ ] 收藏清單，把常用姿勢存成自己的一組
+- [ ] 搭配盤存成多組，整組可以分享連結
 
 有想要的姿勢或功能，歡迎開 Issue 告訴我們。
 
@@ -449,4 +615,4 @@ pumpkin-poses/
 
 — 南瓜｜南瓜虛擬科技 · XR／3D／AI 工作流
 
-<sub>由 南瓜虛擬科技 製作 · 最後更新 2026-11-10</sub>
+<sub>由 南瓜虛擬科技 製作 · 最後更新 2026-11-17</sub>
